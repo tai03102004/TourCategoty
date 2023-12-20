@@ -1,4 +1,12 @@
 import express, {Express,Request,Response} from 'express';
+import sequelize from './config/database';
+
+// Database (mysqlWordbeanch)
+
+sequelize;
+
+// End database
+
 
 const app : Express = express();
 
