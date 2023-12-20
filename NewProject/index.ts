@@ -1,7 +1,9 @@
-import express, {Express,Request,Response} from 'express';
+import express, {Express} from 'express';
 import sequelize from './config/database';
 import dotenv from "dotenv";
-import Tour from "./models/tour.model";
+
+// Router Client
+import clientRoutes from './routes/client/index.route';
 
 dotenv.config();
 
@@ -19,15 +21,7 @@ app.set("views","./views");
 app.set('view engine', 'pug');
 // End pug
 
-app.get("/", async (req: Request , res : Response)  => {
-    const tours = await Tour.findAll({
-        raw : true // Vẽ lại data theo 1 mảng 
-    });
-    console.log(tours);
-    res.render("client/pages/tours/index",{
-        tours: tours,
-    });
-});
+clientRoutes(app);
 
 app.listen(port , () => {
     console.log(` App listening on port ${port}`);
