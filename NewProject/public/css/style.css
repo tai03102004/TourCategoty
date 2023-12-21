@@ -1,4 +1,5 @@
 /* Header */
+
 .header {
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
@@ -33,7 +34,7 @@
 }
 /* End Footer */
 
-/* box-head */
+/* Box-head */
 .box-head {
     margin-bottom: 30px;
 }
@@ -44,4 +45,17 @@
     font-weight: 600;
     color: green;
 }
-/* End box-head */
+/* End Box-head */
+/* Thêm hiệu ứng hover cho các liên kết trong menu */
+.header .inner-menu > ul > li > a:hover {
+    color: #ff6347; /* Màu sắc khi di chuột qua */
+    transition: color 0.3s ease-in-out; /* Hiệu ứng chuyển màu */
+}
+
+/* Thêm hiệu ứng chuyển đổi màu nền cho footer */
+.footer:hover {
+    background: #666;
+    transition: background 0.3s ease-in-out;
+}
+
+
